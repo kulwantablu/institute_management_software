@@ -1,0 +1,17 @@
+<?php 
+    include 'session.php';
+     
+			  $query1="update record set refundsts='2' where regno='".$_GET['regno']."'";
+			  $query="update refundreq set status='2' where id='".$_GET['id']."'";
+			  if(mysqli_query($conn,$query1)==TRUE){		  
+				
+				  echo '<script>window.location.href="refundreq.php";</script>';
+			  }
+			  
+			  if(mysqli_query($conn,$query)==TRUE){		  
+				
+				  echo '<script>window.location.href="refundreq.php";</script>';
+			  }
+		  
+
+?>
